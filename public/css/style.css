@@ -1,0 +1,73 @@
+
+nav ul a {
+    color: #444;
+}
+
+nav .brand-logo  {
+    color: #444;
+}
+
+.bullet-points {
+    list-style-type: circle;
+}
+
+.banner_text {
+    color: white;
+    font-weight: 700;
+    text-shadow: 0 1px 0 black;
+}
+
+.teal-text {
+    color: #458b86;
+}
+
+.parallax-container {
+    min-height: 380px;
+    line-height: 0;
+    height: auto;
+}
+
+.parallax-container .parallax img {
+      width: 100%;
+      opacity: 100;      
+}
+
+.overlay {
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(https://www.ocf.berkeley.edu/~sather/wp-content/uploads/2018/01/food--1200x600.jpg);
+}
+
+.fredoka_one_font {
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 0 1px 0 black;
+}
+
+.search {
+    padding-right: 5px;
+}
+
+#menu_icon {
+    color: black;
+}
+
+#logo_img {
+    margin-top: 8px;
+    margin-right: 5px;
+    margin-left: 45px;
+    margin-bottom: 5px;
+    height: 45px;
+    width: 140px;
+}
+
+.buttonWidth {
+    width: 150px;
+    display: flex;
+}
+
+#sign_in, #my_recipes, #view_all, #sign_up {
+    padding-right: 5px;
+}

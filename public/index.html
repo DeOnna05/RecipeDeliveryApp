@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Import Fredoka One font family -->
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Imports css style sheet-->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<title>Bamazon App</title>
+
+<body>
+  <div>
+    <!-- search dropdown list for top navbar button -->
+    <ul id="dropdown1" class="dropdown-content">
+      <li class="divider"></li>
+      <li><a href="/" class="search_button" data-category="Breakfast">Breakfast</a></li>
+      <li class="divider"></li>
+      <li><a href="/" class="search_button" data-category="Appetizers">Appetizers</a></li>
+      <li class="divider"></li>
+      <li><a href="/" class="search_button" data-category="Entrees">Entrees</a></li>
+      <li class="divider"></li>
+      <li><a href="/" class="search_button" data-category="Desserts">Desserts</a></li>
+      <li class="divider"></li>
+    </ul>
+    <!-- search dropdown list for the side nav button -->
+    <ul id="dropdown2" class="dropdown-content">
+      <li class="divider"></li>
+      <li><a href="/" data-category="Breakfast" class="search_button sidenav-close">Breakfasts</a></li>
+      <li class="divider"></li>
+      <li><a href="/" data-category="Appetizers" class="search_button sidenav-close">Appetizers</a></li>
+      <li class="divider"></li>
+      <li><a href="/" data-category="Entrees" class="search_button sidenav-close">Entrees</a></li>
+      <li class="divider"></li>
+      <li><a href="/" data-category="Desserts" class="search_button sidenav-close">Desserts</a></li>
+      <li class="divider"></li>
+    </ul>
+    <!-- nav bar with logo -->
+    <div class="navbar-fixed">
+      <nav class="white" role="navigation">
+        <!-- <div class="nav-wrapper container"> -->
+        <a href="/" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons" id="menu_icon">menu</i></a>
+        <a id="logo-container" href="/" class="brand-logo"><i id="home_icon" class="logo-icon"><img id="logo_img" src="./media/RecipeDeliveryLogo2.png"
+              alt="recipe delivery logo"></i></a>
+
+        <!-- top navbar icons and links -->
+        <ul class="right hide-on-med-and-down">
+          <li><a id="view_link" class="view_link waves-effect waves-teal buttonWidth" href="/"><i id="view_all" class="material-icons">local_dining</i>All
+              Recipes</a></li>
+
+          <li><a id="recipe_link" href="#modal3" class="view_my_recipes modal-trigger waves-effect waves-teal buttonWidth"><i id="my_recipes" class="material-icons">library_books</i>My
+              Recipes</a></li>
+
+          <li><a id="search_link" href="/" class="waves-effect waves-teal dropdown-trigger buttonWidth" data-target="dropdown1"><i
+                class="search material-icons">search</i>Search</a></li>
+
+          <li><a id="sign_up_link" href="#modal1" class="waves-effect waves-teal modal-trigger buttonWidth"><i id="sign_up" class="material-icons">person_add</i>Sign Up</a></li>
+
+          <li><a id="sign_in_link" href="#modal2" class="waves-effect waves-teal modal-trigger buttonWidth"><i id="sign_in" class="material-icons">assignment_ind</i>Sign In</a></li>
+        </ul>
+    </div>
+    <!-- side nav slide out for mobile views -->
+    <ul id="nav-mobile" class="sidenav">
+      <li>
+        <div class="user-view">
+          <div class="background">
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a href="/" class="view_link waves-effect waves-teal sidenav-close"><i id="view_all" class="material-icons">local_dining</i>All
+          Recipes</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a href="/" class="sidenav-close waves-effect waves-teal view_my_recipes"><i id="my_recipes" class="material-icons">library_books</i>My
+          Recipes</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a href="/" class="waves-effect waves-teal dropdown-trigger" data-target="dropdown2"><i class="search material-icons">search</i>Search</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+    
+      <li><a id="sign_up_link" href="#modal1" class="sidenav-close waves-effect waves-teal modal-trigger"><i id="sign_up" class="material-icons">person_add</i>Sign Up</a></li>
+      <li>
+        <div class="divider"></div>
+      </li>
+      <li><a id="sign_in_link" href="#modal2" class="sidenav-close waves-effect waves-teal modal-trigger"><i id="sign_in" class="material-icons">assignment_ind</i>Sign In</a></li>
+      <li>
+          <div class="divider"></div>
+        </li>
+    </ul>
+    </nav>
+  </div>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2 fredoka_one_font">Recipe Delivery</h1>
+        <div class="row center">
+          <h5 class="header col s12 light banner_text">A Quick And Easy Way to Order Ingredients From All Of Your
+            Favorite Recipes</h5>
+        </div>
+        <div class="row center">
+          <a href="#modal1" id="download-button" class="pulse btn-large waves-effect waves-light teal lighten-1 z-depth-5 modal-trigger">Get
+            Started</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <!-- home page picture (in CSS) with darkened overlay -->
+    <div class="parallax overlay"></div>
+  </div>
+  <!--   Icon Section   -->
+  <div id="card_view">
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="medium material-icons">search</i></h2>
+            <h5 class="center brown-text">STEP 1</h5>
+
+            <p class="brown-text">Browse through recipes and select the ones you would like to order by clicking the
+              "Add to my recipies" button.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="medium material-icons">playlist_add_check</i></h2>
+            <h5 class="center brown-text">STEP 2</h5>
+
+            <p class="brown-text">
+              Click the "My Recipes" button to modify the list of ingredients in your cart. You can remove items you do not want
+              and modify the amount to be ordered, if needed.
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="medium material-icons">local_shipping</i></h2>
+            <h5 class="center brown-text">STEP 3</h5>
+
+            <p class="brown-text">Checkout and your done! Your ingredients will be shipped to your home and your
+              recipes will be saved for you to view when you are ready to cook!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="recipe_view" class="row">
+      <!-- recipes are dynamically generated here -->
+    </div>
+  </div>
+
+  <!-- New user registration modal -->
+<div class="container">
+  <div id="modal1" class="modal center">
+    <div class="modal-content">
+      <h4>Sign Up</h4>
+    </div>
+    <!-- register input fields -->
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="first_name" type="text" class="validate">
+        <label for="first_name">First Name</label>
+      </div>
+      <div class="row">
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+    
+    
+    <div class="row">
+      <div class="input-field col s6">
+        <input id="new_username" type="text" class="validate">
+        <label for="new_username">Create Username</label>
+      </div>
+      <div class="row">
+          <div class="input-field col s6">
+            <input type="password" class="validate password">
+            <label for="password">Create Password</label>
+          </div>
+        </div>
+    </div>
+   
+
+    <div class="modal-footer">
+      <a href="/" class="modal-close waves-effect waves-green btn-flat register">Submit</a>
+    </div>
+  </div>
+  </div>
+</div>
+
+  <!-- login modal -->
+  <div id="modal2" class="modal center">
+    <div class="modal-content">
+      <h4>Sign In To Your Account</h4>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s8">
+        <input id="username" type="text" class="validate">
+        <label for="username">Username</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s8">
+        <input id="password" type="password" class="validate">
+        <label for="password">Password</label>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <a href="/" class="modal-close waves-effect waves-green btn-flat" id="login_button">Submit</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+          
+  <div id="modal3" class="modal bottom-sheet">
+    <div class="modal-content-review">
+      <h4 >Order Review</h4>
+    </div>
+    <div class="modal-footer">
+      <a href="/" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+    
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="col l6 s12">
+      <div class="footer-copyright">
+        <div class="container">
+          Created by DeOnna Gray - Made with <a class="blue-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
+      </div>
+  </footer>
+
+  <!-- loads google api for ajax calls -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- loads materialize javascript -->
+  <script type="text/javascript" src="./js/materialize.min.js"></script>
+  <!-- pulls in app javascript file -->
+  <script src="./js/app.js"></script>
+  </div>
+</body>
+
+</html>

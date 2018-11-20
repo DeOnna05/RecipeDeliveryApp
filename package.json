@@ -1,0 +1,29 @@
+{
+  "name": "bamazon-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node ./seeders/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeOnna05/Bamazon-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeOnna05/Bamazon-App/issues"
+  },
+  "homepage": "https://github.com/DeOnna05/Bamazon-App#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "materialize-css": "^1.0.0-rc.2",
+    "mysql2": "^1.6.1",
+    "nodemon": "^1.18.5",
+    "npm": "^6.4.1",
+    "sequelize": "^4.41.0"
+  }
+}
